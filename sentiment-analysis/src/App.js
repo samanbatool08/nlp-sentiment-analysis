@@ -11,7 +11,7 @@ class App extends Component {
   super(props);
   this.state = {
     sentimentScore: null,
-    generalSentiment: null;
+    generalSentiment: null
   };
 }
 
@@ -20,7 +20,8 @@ render() {
     <div className='App'>
       <h2>Text Sentiment Analysis</h2>
       <p>Enter for real-time analysis:</p>
-      
+      <textarea />
+      <p>Sentiment Score: {this.state.sentimentScore}</p>
     </div>
   )
 }
