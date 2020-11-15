@@ -13,6 +13,11 @@ class App extends Component {
     sentimentScore: null,
     generalSentiment: null
   };
+  this.findSentiment = this.findSentiment.bind(this);
+}
+
+findSentiment(e){
+  const result = sentiment.analyze(e.target.value)
 }
 
 render() {
@@ -20,8 +25,9 @@ render() {
     <div className='App'>
       <h2>Text Sentiment Analysis</h2>
       <p>Enter for real-time analysis:</p>
-      <textarea />
+      <textarea onChange/>
       <p>Sentiment Score: {this.state.sentimentScore}</p>
+      <p>General Sentiment: {this.state.generalSentiment}</p>
     </div>
   )
 }
