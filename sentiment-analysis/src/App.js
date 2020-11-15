@@ -23,7 +23,20 @@ findSentiment(e){
   this.setState({
     sentimentScore: result.score
   })
-
+  if(result.score < 0) {
+    this.setState({
+      generalSentiment: "Negative"
+    })
+  } 
+  else if(result.score > 0){
+    this.setState({
+      generalSentiment: "Positive"
+    })
+  } else {
+    this.setState({
+      generalSentiment: "Neutral"
+    })
+  }
 }
 
 render() {
