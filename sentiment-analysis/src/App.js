@@ -17,7 +17,13 @@ class App extends Component {
 }
 
 findSentiment(e){
+  e.preventDefault()
   const result = sentiment.analyze(e.target.value)
+  // console.log(result)
+  this.setState({
+    sentimentScore: result.score
+  })
+
 }
 
 render() {
