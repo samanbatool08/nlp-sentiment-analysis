@@ -13,7 +13,9 @@ class App extends Component {
 
 render() {
   return (
-    <div>
+    <div className='App'>
+      <h2>Text Sentiment Analysis</h2>
+      <p>Enter for real-time analysis:</p>
     </div>
   )
 }
