@@ -25,7 +25,7 @@ render() {
     <div className='App'>
       <h2>Text Sentiment Analysis</h2>
       <p>Enter for real-time analysis:</p>
-      <textarea onChange/>
+      <textarea onChange={this.findSentiment} />
       <p>Sentiment Score: {this.state.sentimentScore}</p>
       <p>General Sentiment: {this.state.generalSentiment}</p>
     </div>
